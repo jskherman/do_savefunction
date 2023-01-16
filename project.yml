@@ -11,7 +11,7 @@ environment:
 packages:
   # - name: "savedata15m"
   #   functions:
-  #     - name: "savedata15m"
+  #     - name: "fn15m"
   #       runtime: "python:default"
   #       triggers:
   #         - name: "every15m"
@@ -22,7 +22,7 @@ packages:
   #       #   timeout: 180000
   - name: "savedata0300h"
     functions:
-      - name: "savedata0300h"
+      - name: "fn0300h"
         runtime: "python:default"
         triggers:
           - name: "every0300h"
@@ -33,7 +33,7 @@ packages:
           timeout: 180000
   # - name: "savedata3d"
   #   functions:
-  #     - name: "savedata3d"
+  #     - name: "fn3d"
   #       runtime: "python:default"
   #       main: "main.py"
   #       triggers:
