@@ -1,13 +1,13 @@
 alerts:
-  - rule: DEPLOYMENT_FAILED
-  - rule: DOMAIN_FAILED
+  - rule: "DEPLOYMENT_FAILED"
+  - rule: "DOMAIN_FAILED"
 functions:
   - github:
-      branch: main
+      branch: "main"
       deploy_on_push: true
-      repo: jskherman/do_savefunction
-    name: savedata
+      repo: "jskherman/do_savefunction"
+    name: "fn0300h"
     routes:
       - path: /
     source_dir: /
-name: savedata
+name: "savedata"
