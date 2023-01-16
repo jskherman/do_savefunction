@@ -9,17 +9,17 @@ environment:
   GITHUB_USERNAME: ${GITHUB_USERNAME}
   GITHUB_ACCESS_TOKEN: ${GITHUB_ACCESS_TOKEN}
 packages:
-  - name: "savedata15m"
-    functions:
-      - name: "savedata15m"
-        runtime: "python:default"
-        triggers:
-          - name: "every15m"
-            sourceType: scheduler
-            sourceDetails:
-              cron: "0,15,30,45 * * * *" # every 15 minutes
-        # limits:
-        #   timeout: 180000
+  # - name: "savedata15m"
+  #   functions:
+  #     - name: "savedata15m"
+  #       runtime: "python:default"
+  #       triggers:
+  #         - name: "every15m"
+  #           sourceType: scheduler
+  #           sourceDetails:
+  #             cron: "0,15,30,45 * * * *" # every 15 minutes
+  #       # limits:
+  #       #   timeout: 180000
   - name: "savedata0300h"
     functions:
       - name: "savedata0300h"
@@ -31,42 +31,23 @@ packages:
               cron: "0 3 * * *" # every day at 03:00 AM
         limits:
           timeout: 180000
-  - name: "savedata3d"
-    functions:
-      - name: "savedata3d"
-        runtime: "python:default"
-        main: "main.py"
-        triggers:
-          - name: "every3d"
-            sourceType: scheduler
-            sourceDetails:
-              cron: "0 3 */3 * *" # every 3 days at 03:00 AM
-        # limits:
-        #   timeout: 180000
-        # binary: false
-        # main: ""
-        # web: true
-        # websecure: false
-        # parameters: {}
-        # environment: {}
-        # annotations: {}
-        # limits: {}
-# parameters: {}
-# environment: {}
-# packages:
-#     - name: sample
-#       shared: false
-#       environment: {}
-#       parameters: {}
-#       annotations: {}
-#       functions:
-#         - name: hello
-#           binary: false
-#           main: ""
-#           runtime: nodejs:default
-#           web: true
-#           websecure: false
-#           parameters: {}
-#           environment: {}
-#           annotations: {}
-#           limits: {}
+  # - name: "savedata3d"
+  #   functions:
+  #     - name: "savedata3d"
+  #       runtime: "python:default"
+  #       main: "main.py"
+  #       triggers:
+  #         - name: "every3d"
+  #           sourceType: scheduler
+  #           sourceDetails:
+  #             cron: "0 3 */3 * *" # every 3 days at 03:00 AM
+  #       limits:
+  #         timeout: 180000
+  # binary: false
+  # main: ""
+  # web: true
+  # websecure: false
+  # parameters: {}
+  # environment: {}
+  # annotations: {}
+  # limits: {}
